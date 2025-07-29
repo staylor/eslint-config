@@ -42,7 +42,6 @@ export default tseslint.config(
       },
     },
     plugins: {
-      import: importPlugin,
       json,
       node,
       react,
