@@ -1,8 +1,9 @@
 {
   "name": "@wonderboymusic/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shared config for ESLint 9",
   "main": "index.js",
+  "types": "index.d.ts",
   "author": "Scott Taylor <scott.c.taylor@mac.com>",
   "license": "MIT",
   "type": "module",
