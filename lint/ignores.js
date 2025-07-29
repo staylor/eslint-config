@@ -1,7 +1,6 @@
 export default [
   '**/*.snap',
-  '**/package.json',
-  '**/tsconfig.json',
+  '**/*.json',
   '**/.react-router',
   '.cache',
   '.vscode',
