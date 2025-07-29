@@ -1,4 +1,3 @@
-import json from '@eslint/json';
 import importPlugin from 'eslint-plugin-import';
 import node from 'eslint-plugin-node';
 import prettier from 'eslint-plugin-prettier/recommended';
@@ -42,7 +41,6 @@ export default tseslint.config(
       },
     },
     plugins: {
-      json,
       node,
       react,
       'react-hooks': legacyPlugin('eslint-plugin-react-hooks', 'react-hooks'),
