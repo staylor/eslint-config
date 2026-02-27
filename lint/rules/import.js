@@ -1,11 +1,11 @@
 import { ERROR } from './constants.js';
 
 export default {
-  'import/first': ERROR,
-  'import/no-amd': ERROR,
-  'import/no-duplicates': ERROR,
-  'import/no-webpack-loader-syntax': ERROR,
-  'import/order': [
+  'import-x/first': ERROR,
+  'import-x/no-amd': ERROR,
+  'import-x/no-duplicates': ERROR,
+  'import-x/no-webpack-loader-syntax': ERROR,
+  'import-x/order': [
     ERROR,
     {
       'newlines-between': 'always',

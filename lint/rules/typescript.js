@@ -30,8 +30,8 @@ export default {
     },
   ],
 
-  // These rules should eventually come from @typescript-eslint/stylistic
-  // in typescript-eslint@6
+  '@typescript-eslint/return-await': [ERROR, 'in-try-catch'],
+
   '@typescript-eslint/consistent-type-assertions': WARN,
   '@typescript-eslint/consistent-type-imports': WARN,
 };

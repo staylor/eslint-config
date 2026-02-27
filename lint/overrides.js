@@ -1,7 +1,6 @@
 import testingLibrary from 'eslint-plugin-testing-library';
 import vitest from 'eslint-plugin-vitest';
 
-import { legacyPlugin } from './legacy.js';
 import { OFF } from './rules/constants.js';
 import testingLibraryRules from './rules/testing-library.js';
 import vitestRules from './rules/vitest.js';
@@ -19,12 +18,12 @@ export default [
     // Rules specifically for our tests
     files: ['**/*.test.*'],
     plugins: {
-      'testing-library': legacyPlugin('eslint-plugin-testing-library', 'testing-library'),
+      'testing-library': testingLibrary.configs['flat/dom'].plugins['testing-library'],
       vitest,
     },
     rules: {
-      ...testingLibrary.configs.dom.rules,
-      ...testingLibrary.configs.react.rules,
+      ...testingLibrary.configs['flat/dom'].rules,
+      ...testingLibrary.configs['flat/react'].rules,
       ...testingLibraryRules,
       ...vitest.configs.all.rules,
       ...vitestRules,

@@ -45,10 +45,10 @@ export default {
   ],
   'no-unsafe-negation': WARN,
   'no-new-func': WARN,
-  'no-new-object': WARN,
+  'no-object-constructor': WARN,
   'no-octal': WARN,
   'no-redeclare': ERROR,
-  'no-return-await': ERROR,
+
   'no-script-url': WARN,
   'no-self-assign': WARN,
   'no-self-compare': WARN,

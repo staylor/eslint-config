@@ -1,18 +1,18 @@
-import importPlugin from 'eslint-plugin-import';
-import node from 'eslint-plugin-node';
+import importPlugin from 'eslint-plugin-import-x';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
 import prettier from 'eslint-plugin-prettier/recommended';
+import promise from 'eslint-plugin-promise';
 import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 import ignores from './lint/ignores.js';
-import { legacyPlugin } from './lint/legacy.js';
 import overrides from './lint/overrides.js';
 import coreRules from './lint/rules/core.js';
 import importRules from './lint/rules/import.js';
 import reactRules from './lint/rules/react.js';
 import typescriptRules from './lint/rules/typescript.js';
-import importSettings from './lint/settings/import.js';
 import reactSettings from './lint/settings/react.js';
 
 const createConfig = (config) => ({
@@ -26,6 +26,8 @@ export default tseslint.config(
     ignores,
   },
   importPlugin.flatConfigs.typescript,
+  jsxA11y.flatConfigs.recommended,
+  promise.configs['flat/recommended'],
   prettier,
   ...tseslint.configs.recommended.map(createConfig),
   createConfig({
@@ -35,18 +37,14 @@ export default tseslint.config(
       globals: {
         ...globals.browser,
         ...globals.commonjs,
-        ...globals.es6,
-        ...globals.jest,
         ...globals.node,
       },
     },
     plugins: {
-      node,
       react,
-      'react-hooks': legacyPlugin('eslint-plugin-react-hooks', 'react-hooks'),
+      'react-hooks': reactHooks,
     },
     settings: {
-      ...importSettings,
       ...reactSettings,
     },
     rules: {
