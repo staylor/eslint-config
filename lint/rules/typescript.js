@@ -30,8 +30,6 @@ export default {
     },
   ],
 
-  '@typescript-eslint/return-await': [ERROR, 'in-try-catch'],
-
   '@typescript-eslint/consistent-type-assertions': WARN,
   '@typescript-eslint/consistent-type-imports': WARN,
 };
