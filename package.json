@@ -4,9 +4,21 @@
   "description": "Shared config for ESLint 10",
   "main": "index.js",
   "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "lint"
+  ],
   "author": "Scott Taylor <scott.c.taylor@mac.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/staylor/eslint-config.git"
+  },
   "type": "module",
+  "scripts": {
+    "test": "node test/smoke.mjs"
+  },
   "dependencies": {
     "@eslint/compat": "2.1.1",
     "@vitest/eslint-plugin": "1.6.28",
