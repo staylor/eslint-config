@@ -1,5 +1,8 @@
 # @wonderboymusic/eslint-config
 
+> [!WARNING]
+> This package is deprecated. Use [`@wonderboymusic/oxc-config`](https://github.com/staylor/oxc-config), which carries the same rules to oxlint and the same formatting to oxfmt.
+
 Shared [ESLint 10](https://eslint.org/) flat config for TypeScript, React, and Prettier.
 
 ## What's Included
