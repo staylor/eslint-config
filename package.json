@@ -1,6 +1,6 @@
 {
   "name": "@wonderboymusic/eslint-config",
-  "version": "2.0.3",
+  "version": "3.0.0",
   "description": "Shared config for ESLint 10",
   "main": "index.js",
   "types": "index.d.ts",
