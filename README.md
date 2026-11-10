@@ -1,6 +1,6 @@
 # @wonderboymusic/eslint-config
 
-Shared [ESLint 9](https://eslint.org/) flat config for TypeScript, React, and Prettier.
+Shared [ESLint 10](https://eslint.org/) flat config for TypeScript, React, and Prettier.
 
 ## What's Included
 
@@ -10,7 +10,12 @@ Shared [ESLint 9](https://eslint.org/) flat config for TypeScript, React, and Pr
 - **Imports** — [eslint-plugin-import-x](https://github.com/un-ts/eslint-plugin-import-x) with TypeScript resolver
 - **Promises** — [eslint-plugin-promise](https://github.com/eslint-community/eslint-plugin-promise)
 - **Prettier** — [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier) + [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
-- **Testing** — [eslint-plugin-testing-library](https://github.com/testing-library/eslint-plugin-testing-library) and [eslint-plugin-vitest](https://github.com/vitest-dev/eslint-plugin-vitest) for test files
+- **Testing** — [eslint-plugin-testing-library](https://github.com/testing-library/eslint-plugin-testing-library) and [@vitest/eslint-plugin](https://github.com/vitest-dev/eslint-plugin-vitest) for test files
+
+## Requirements
+
+- Node.js `^20.19.0 || ^22.13.0 || >=24`
+- ESLint 10
 
 ## Install
 

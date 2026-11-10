@@ -1,5 +1,5 @@
+import vitest from '@vitest/eslint-plugin';
 import testingLibrary from 'eslint-plugin-testing-library';
-import vitest from 'eslint-plugin-vitest';
 
 import { OFF } from './rules/constants.js';
 import testingLibraryRules from './rules/testing-library.js';

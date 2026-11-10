@@ -1,4 +1,4 @@
-import { OFF, ERROR } from './constants.js';
+import { OFF, ERROR, WARN } from './constants.js';
 
 export default {
   'vitest/consistent-test-it': [
@@ -18,4 +18,41 @@ export default {
   'vitest/prefer-strict-equal': OFF,
   'vitest/require-hook': OFF,
   'vitest/prefer-to-be-falsy': OFF,
+  'vitest/prefer-to-be-truthy': WARN,
+
+  // Added to the plugin's `all` config after eslint-plugin-vitest 0.5.4.
+  // Off to keep the previous rule set; delete a line to adopt that rule.
+  'vitest/consistent-each-for': OFF,
+  'vitest/consistent-vitest-vi': OFF,
+  'vitest/expect-expect': OFF,
+  'vitest/hoisted-apis-on-top': OFF,
+  'vitest/no-commented-out-tests': OFF,
+  'vitest/no-identical-title': OFF,
+  'vitest/no-import-node-test': OFF,
+  'vitest/no-unneeded-async-expect-function': OFF,
+  'vitest/padding-around-after-all-blocks': OFF,
+  'vitest/padding-around-after-each-blocks': OFF,
+  'vitest/padding-around-all': OFF,
+  'vitest/padding-around-before-all-blocks': OFF,
+  'vitest/padding-around-before-each-blocks': OFF,
+  'vitest/padding-around-describe-blocks': OFF,
+  'vitest/padding-around-expect-groups': OFF,
+  'vitest/padding-around-test-blocks': OFF,
+  'vitest/prefer-called-exactly-once-with': OFF,
+  'vitest/prefer-called-times': OFF,
+  'vitest/prefer-describe-function-title': OFF,
+  'vitest/prefer-expect-type-of': OFF,
+  'vitest/prefer-import-in-mock': OFF,
+  'vitest/prefer-importing-vitest-globals': OFF,
+  'vitest/prefer-strict-boolean-matchers': OFF,
+  'vitest/prefer-to-have-been-called-times': OFF,
+  'vitest/prefer-vi-mocked': OFF,
+  'vitest/require-awaited-expect-poll': OFF,
+  'vitest/require-local-test-context-for-concurrent-snapshots': OFF,
+  'vitest/require-mock-type-parameters': OFF,
+  'vitest/unbound-method': OFF,
+  'vitest/valid-describe-callback': OFF,
+  'vitest/valid-expect': OFF,
+  'vitest/valid-expect-in-promise': OFF,
+  'vitest/valid-title': OFF,
 };
