@@ -1,3 +1,5 @@
+import { fixupPluginRules } from '@eslint/compat';
+import { defineConfig, globalIgnores } from 'eslint/config';
 import importPlugin from 'eslint-plugin-import-x';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import prettier from 'eslint-plugin-prettier/recommended';
@@ -21,10 +23,8 @@ const createConfig = (config) => ({
   ignores,
 });
 
-export default tseslint.config(
-  {
-    ignores,
-  },
+export default defineConfig(
+  globalIgnores(ignores),
   importPlugin.flatConfigs.typescript,
   jsxA11y.flatConfigs.recommended,
   promise.configs['flat/recommended'],
@@ -41,7 +41,9 @@ export default tseslint.config(
       },
     },
     plugins: {
-      react,
+      // eslint-plugin-react 7.37.5 calls context methods that ESLint 10 removed;
+      // drop the wrapper once a release declares ESLint 10 support.
+      react: fixupPluginRules(react),
       'react-hooks': reactHooks,
     },
     settings: {
